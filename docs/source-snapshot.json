@@ -1,0 +1,846 @@
+{
+  "schema_version": 1,
+  "description": "Per-file SHA-256 of the optimized source snapshot that the task judge checked (PASS, bitwise) and the full-data runs validated.",
+  "upstream": {
+    "repository": "https://github.com/thu-ml/Motus",
+    "commit": "88f6fe30c62af033874b0a2e48ad1cbdaf12cfdf"
+  },
+  "files": {
+    ".gitignore": {
+      "sha256": "e9a3d20136bdfd57f25d00a2b97d86f0f5c7ae7d4322372b7befc93027d6c4ea",
+      "executable": false
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "265c1b9889403fa7aacd7e11f6f678b3cfa235779fe027bcf29c9eafdf05587c",
+      "executable": false
+    },
+    "DATA_FORMAT.md": {
+      "sha256": "e5325bfe8781aa0dac808b334f9d24397c773edecd06e46aaa40b8aa1279937e",
+      "executable": false
+    },
+    "INFERENCE.md": {
+      "sha256": "1b4f76325a4c1344e0861b0ab2fbe7f6436339d4ee4824c801f2ae9d9731c49f",
+      "executable": false
+    },
+    "LICENSE": {
+      "sha256": "db4a279c8b8368623d40380fc570a48e30001c96ee5521cd5f5c4e0e86aae312",
+      "executable": false
+    },
+    "README.md": {
+      "sha256": "2fef8b2dfe6a6ed8761e14bdaab1f8443434d76031b47c8ff4d2ab5ab5f5d2bc",
+      "executable": false
+    },
+    "TRAINING.md": {
+      "sha256": "96b85f7a85cb29413877819cd27f9f55bc43e38c3075bec4a111c257c1177fad",
+      "executable": false
+    },
+    "bak/device_utils.py": {
+      "sha256": "6b57596753de7c0e7955ae9ddd5017f78c5d113edecc93215ef8b9c85f938570",
+      "executable": false
+    },
+    "bak/wan/__init__.py": {
+      "sha256": "bc4450e9e1949d1b16734ed08a4f8c3e1c9b6a2a100ff555308fdf1fd4e6ba9f",
+      "executable": false
+    },
+    "bak/wan/configs/__init__.py": {
+      "sha256": "b14a049a5dbb6e8eb7cbcb012bedb716bee24e81709a937d232b0d09e48f4554",
+      "executable": false
+    },
+    "bak/wan/configs/shared_config.py": {
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "executable": false
+    },
+    "bak/wan/configs/wan_i2v_A14B.py": {
+      "sha256": "1cddca2dd2976df3d08c602e437a8d1aec94b33b3cb4dea3187003dbe5195cd2",
+      "executable": false
+    },
+    "bak/wan/configs/wan_t2v_A14B.py": {
+      "sha256": "a1f3a70472aece6d7a3cfe83ed39be829e957484db23069c13c7a3c35ac07a48",
+      "executable": false
+    },
+    "bak/wan/configs/wan_ti2v_5B.py": {
+      "sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+      "executable": false
+    },
+    "bak/wan/distributed/__init__.py": {
+      "sha256": "013ec40a0739296f1ba474036e5d46e06998f795daa0b7c3214773d885a3ab1a",
+      "executable": false
+    },
+    "bak/wan/distributed/fsdp.py": {
+      "sha256": "b787312856a1f4da54648999c143d08c3dfa09be75be78e8c39fd21f55b823dd",
+      "executable": false
+    },
+    "bak/wan/distributed/sequence_parallel.py": {
+      "sha256": "4f50898eff51efbfebf8709e2d2993fc87b2442c548753cd36e4e607cdd55e0a",
+      "executable": false
+    },
+    "bak/wan/distributed/ulysses.py": {
+      "sha256": "0c9969ec8e99358fb79a224700853f89b52724c8dc2055f91972ace47f04a483",
+      "executable": false
+    },
+    "bak/wan/distributed/util.py": {
+      "sha256": "b8925fdbdc0cf4409ba5760d92c66f1e329de40b1dad7f2011a7d37caad97b56",
+      "executable": false
+    },
+    "bak/wan/image2video.py": {
+      "sha256": "53f4f302f7e9bc7bca2465abd3f7ff5f0e8fa909c7dc36bd0c49abb7918d5f68",
+      "executable": false
+    },
+    "bak/wan/modules/__init__.py": {
+      "sha256": "7bb54dcccf99bbdab4d5781519c8324629be898986427054a48285cc7faa316c",
+      "executable": false
+    },
+    "bak/wan/modules/attention.py": {
+      "sha256": "5fe79041993e6e588580f44ec167752553ea8d77d75ef0ba817cf635475ad0ba",
+      "executable": false
+    },
+    "bak/wan/modules/model.py": {
+      "sha256": "2ce2099900a0e62eca0a0f08774cb00df0c2625a1baa149e13d52e41c7f3843b",
+      "executable": false
+    },
+    "bak/wan/modules/t5.py": {
+      "sha256": "c3f07f9d03af9c8dac82a50b137ecf9916f7b7a8447d68ee75ad93acc10126e1",
+      "executable": false
+    },
+    "bak/wan/modules/tokenizers.py": {
+      "sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934",
+      "executable": false
+    },
+    "bak/wan/modules/vae2_1.py": {
+      "sha256": "8bde5923ae0ff4320bd3f7990faa0dbc84e4e48e724fcd31e2871ce61faf8ba0",
+      "executable": false
+    },
+    "bak/wan/modules/vae2_2.py": {
+      "sha256": "fe2e3dd67ec862418cbaf4f0bf400976c086e4f759a286b414c964008c8e2052",
+      "executable": false
+    },
+    "bak/wan/text2video.py": {
+      "sha256": "2f212e1f6d7ba4408a25998091b70ee35dde8bcaaeaedd3ba03d6cdab84dc683",
+      "executable": false
+    },
+    "bak/wan/textimage2video.py": {
+      "sha256": "228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b",
+      "executable": false
+    },
+    "bak/wan/utils/__init__.py": {
+      "sha256": "47b3d1e3f72006ac769d13b34f0575450eec7c1de1ef4f9837436a2057b51033",
+      "executable": false
+    },
+    "bak/wan/utils/fm.py": {
+      "sha256": "9f1104a3e5ef1a371938a7ba10c63cb05cade9bffcefa15bab96fb83311ec904",
+      "executable": false
+    },
+    "bak/wan/utils/fm_solvers.py": {
+      "sha256": "b870bdc7253593b75097896b2351e74f747f76d756f58f1b4b0008d6821ae811",
+      "executable": false
+    },
+    "bak/wan/utils/fm_solvers_unipc.py": {
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "executable": false
+    },
+    "bak/wan/utils/prompt_extend.py": {
+      "sha256": "d90503d4e526e1c899184b809221bd9ea487047de684e31589f2bb2720ca69b4",
+      "executable": false
+    },
+    "bak/wan/utils/qwen_vl_utils.py": {
+      "sha256": "14275f4ca0c4664c37145da6bd8ffe4be7b7854377f6101e80171414397bdc98",
+      "executable": false
+    },
+    "bak/wan/utils/system_prompt.py": {
+      "sha256": "6a42ee64ca850692e91a517b9d86ba649adc973370444746e5af5f3bde087612",
+      "executable": false
+    },
+    "bak/wan/utils/utils.py": {
+      "sha256": "54eff1f85bdd1180171babceb051433ed74efd40b4a04f9d6438b83817b1410e",
+      "executable": false
+    },
+    "configs/__init__.py": {
+      "sha256": "0267b83c6b881e1108e2c1d37bd5e8220a07c82a4ce0aab4dbeebc20629e09c5",
+      "executable": false
+    },
+    "configs/ac_one.yaml": {
+      "sha256": "321078802e2847af00b728b7b2355dc784026b70aa563ec1c0e41bc64b5046b2",
+      "executable": false
+    },
+    "configs/aloha_agilex_2.yaml": {
+      "sha256": "dd061e8fe08674aa5886d93c95cd2c2c405e8d6f04ceb9ee644f75279dd1fe5a",
+      "executable": false
+    },
+    "configs/latent_action.yaml": {
+      "sha256": "f6a843ffaf04c18747c7b1b0bfe331aba9c021237510dc11a46b68806eae5cd5",
+      "executable": false
+    },
+    "configs/lerobot.yaml": {
+      "sha256": "d2ffc47b800c82b775675502f5daa4471f9c532b7da002471e5a098168fdb107",
+      "executable": false
+    },
+    "configs/robotwin.yaml": {
+      "sha256": "e49af5f00acc4f0f0f1ddac296631eb4c6748f8689d293eb0facbe7206018a80",
+      "executable": false
+    },
+    "configs/zero1.json": {
+      "sha256": "b291f5ea49ef938a8759038167d338bee5603da56968eae619ac379f3934c5ff",
+      "executable": false
+    },
+    "configs/zero2.json": {
+      "sha256": "aa3c4a62500b4bb07f00650c5b32fd4770a985a25a77ba2258b7e2d6a34cf103",
+      "executable": false
+    },
+    "data/__init__.py": {
+      "sha256": "43809a11b4c13cb7be04193694f636636aebbc8384d7ccaa8167228a1f02afca",
+      "executable": false
+    },
+    "data/ac_one/ac_one_dataset.py": {
+      "sha256": "9199c83c278f89f2a1aa385a2a73ed13b3f2a22c5d9774d0aec41718dbe08de9",
+      "executable": false
+    },
+    "data/aloha_agilex_2/aloha_agilex2_dataset.py": {
+      "sha256": "bcebc12473ef43e720a4e2e02bc013766b87fdc16ac2b7f3036937ba2fa03e39",
+      "executable": false
+    },
+    "data/dataset.py": {
+      "sha256": "ecaf8a00782ec09399cfe655368633272ba4a18db27de9479538f6246cd37a40",
+      "executable": false
+    },
+    "data/latent_action/latent_action_dataset.py": {
+      "sha256": "dae77082a529c6ea4fdd7ae507c237d25114d874eb603af7660cb2a3753f05b6",
+      "executable": false
+    },
+    "data/lerobot/add_cam_concatenated_to_lerobot_dataset.py": {
+      "sha256": "e23779e2776d3d3188b328547a51741b702a55cbd170f6e0e5b6a0d5087c6b9e",
+      "executable": false
+    },
+    "data/lerobot/add_t5_cache_to_lerobot_dataset.py": {
+      "sha256": "a8ff3a9e7c356a543b41ffb75e81ad18a4852dc122b6f2395285fe23d82edc58",
+      "executable": false
+    },
+    "data/lerobot/lerobot_dataset.py": {
+      "sha256": "1b11f63a12f18ca50a360e04a8bfbe220ca2c4d0a4431129d9e5880de429341e",
+      "executable": false
+    },
+    "data/robotwin2/robotwin_agilex_dataset.py": {
+      "sha256": "ff1ea10608c54270f492c07b2d224f3ea63bd0bdcef9f7cb4cb401cca2d0e6cb",
+      "executable": false
+    },
+    "data/robotwin2/robotwin_data_convert/README.md": {
+      "sha256": "508a063c1d05f16eebde45b8d92d6ff5069c2809baecd35feb36bf7da76f656f",
+      "executable": false
+    },
+    "data/robotwin2/robotwin_data_convert/config.yml": {
+      "sha256": "74283dcca62c29bbe8e7e1bfc24491c699f6dca4883656ba483242a6e61d9374",
+      "executable": false
+    },
+    "data/robotwin2/robotwin_data_convert/download_robotwin_dataset.py": {
+      "sha256": "ea8ba6016f87a92759ebf466b6cfb1dc5bd199fc4ac1f2d5c079d1ba13592f78",
+      "executable": true
+    },
+    "data/robotwin2/robotwin_data_convert/robotwin_converter.py": {
+      "sha256": "4d61b770b473d473a7d54efc980b6e53271d25792316e3b6c1fb69999dc9e2dd",
+      "executable": false
+    },
+    "data/robotwin2/robotwin_data_convert/run_conversion.sh": {
+      "sha256": "704b32c007347b8145c145e3d85e64c4ca6445bfcd5d1a6808728734b8f04c4d",
+      "executable": true
+    },
+    "data/utils/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executable": false
+    },
+    "data/utils/calc_latent_action_quantiles.py": {
+      "sha256": "65247e58d95d50ef3e57ecb8a0d44d72e95b47f89d49db0d118c71e6a9594494",
+      "executable": false
+    },
+    "data/utils/calc_latent_action_stat_min_max.py": {
+      "sha256": "ae6dd3a4b1f97320b294d263bac0a2dec057f24e5ab5c306b20d1b83685c6e55",
+      "executable": false
+    },
+    "data/utils/calc_stat.py": {
+      "sha256": "41d2aadc2152fa37ac6d8980f19b5b4aa65e184e8ef24b057912cd988f3c25ec",
+      "executable": false
+    },
+    "data/utils/image_utils.py": {
+      "sha256": "a6f66f17ff84c0ff660f1c900cc02f9f88654ca081c8446bf5f93c8a56a1ed7b",
+      "executable": false
+    },
+    "data/utils/latent_action_q01_q99.json": {
+      "sha256": "d8cd2ad96b12257a33236dae19533a6e227d33f1b8ffd34058c116410d95ae82",
+      "executable": false
+    },
+    "data/utils/latent_action_stat_mean_std.json": {
+      "sha256": "65b2e1ca78416bf2ad4d1264fb815bcf67bc95a7c92d0fe722742b1e6192ab29",
+      "executable": false
+    },
+    "data/utils/latent_action_stat_min_max.json": {
+      "sha256": "6165b4b43cbe44402e7ab512810ceea93627887d9ffab81f1b66ec669b6841ab",
+      "executable": false
+    },
+    "data/utils/multi_camera_concat.py": {
+      "sha256": "3221969eaf0d048686f27593504521e0519c4345697c94dcfea7cc1fbe2f8646",
+      "executable": false
+    },
+    "data/utils/norm.py": {
+      "sha256": "e2c56b3511efbb9649be5d7f1b9bb8df0f9f61b4068b78ea45b4455ea950a8fb",
+      "executable": false
+    },
+    "data/utils/quantile_workers.py": {
+      "sha256": "ac58f71dbd8ce7dbee9d93d15b4baf79701f8c2dc8fe7bea08a45dbffe513a06",
+      "executable": false
+    },
+    "data/utils/stat.json": {
+      "sha256": "ebca033183dbcb2d669f9f38420dff61f124809f957fab37f6c5eae6986a8a47",
+      "executable": false
+    },
+    "inference/real_world/Motus/README.md": {
+      "sha256": "5d8a1b50c1328083de9bed1953801b87488a2734ea80d5fa1240808b5afa34e3",
+      "executable": false
+    },
+    "inference/real_world/Motus/__init__.py": {
+      "sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/device_utils.py": {
+      "sha256": "6b57596753de7c0e7955ae9ddd5017f78c5d113edecc93215ef8b9c85f938570",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/qwen2_5_vl/__init__.py": {
+      "sha256": "65ee89083246d69a727613e9ef352e35e952a3f87f4eaa66afa22709e49ed3bb",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/qwen2_5_vl/configuration_qwen2_5_vl.py": {
+      "sha256": "a104caeee98ebbf2de2e4ef1ac34b012da461c7427efca5daa619420cf2a33ef",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/qwen2_5_vl/modeling_qwen2_5_vl.py": {
+      "sha256": "543c996ecbb676e9642b5d32bb239505de39c866e381539b012200c6f8ee8302",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/qwen2_5_vl/modular_qwen2_5_vl.py": {
+      "sha256": "f623181fae7f970923ada19d58ed92d11ba2a908684de7c44283746396b1dc66",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/qwen2_5_vl/processing_qwen2_5_vl.py": {
+      "sha256": "11a7d3077f559fb952e453385eb491e5779caeee791bb167e079428d7ffe9abe",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/__init__.py": {
+      "sha256": "bc4450e9e1949d1b16734ed08a4f8c3e1c9b6a2a100ff555308fdf1fd4e6ba9f",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/configs/__init__.py": {
+      "sha256": "b14a049a5dbb6e8eb7cbcb012bedb716bee24e81709a937d232b0d09e48f4554",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/configs/shared_config.py": {
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/configs/wan_i2v_A14B.py": {
+      "sha256": "1cddca2dd2976df3d08c602e437a8d1aec94b33b3cb4dea3187003dbe5195cd2",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/configs/wan_t2v_A14B.py": {
+      "sha256": "a1f3a70472aece6d7a3cfe83ed39be829e957484db23069c13c7a3c35ac07a48",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/configs/wan_ti2v_5B.py": {
+      "sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/distributed/__init__.py": {
+      "sha256": "013ec40a0739296f1ba474036e5d46e06998f795daa0b7c3214773d885a3ab1a",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/distributed/fsdp.py": {
+      "sha256": "b787312856a1f4da54648999c143d08c3dfa09be75be78e8c39fd21f55b823dd",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/distributed/sequence_parallel.py": {
+      "sha256": "4f50898eff51efbfebf8709e2d2993fc87b2442c548753cd36e4e607cdd55e0a",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/distributed/ulysses.py": {
+      "sha256": "0c9969ec8e99358fb79a224700853f89b52724c8dc2055f91972ace47f04a483",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/distributed/util.py": {
+      "sha256": "b8925fdbdc0cf4409ba5760d92c66f1e329de40b1dad7f2011a7d37caad97b56",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/image2video.py": {
+      "sha256": "53f4f302f7e9bc7bca2465abd3f7ff5f0e8fa909c7dc36bd0c49abb7918d5f68",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/__init__.py": {
+      "sha256": "7bb54dcccf99bbdab4d5781519c8324629be898986427054a48285cc7faa316c",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/attention.py": {
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/model.py": {
+      "sha256": "01feaa3c7942fa85b9d0056d567c9793899fd841bbe26fcca8bde944868f1979",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/t5.py": {
+      "sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/tokenizers.py": {
+      "sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/vae2_1.py": {
+      "sha256": "d0dfe9eccd0cdbcb37ffde9887579be58f4c1bb6fc2dbb1b72e8916e170df180",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/modules/vae2_2.py": {
+      "sha256": "e949e2c7b6fbda11caa2546c425992f193b3c05ff82544e269db5f11f687ebdd",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/text2video.py": {
+      "sha256": "2f212e1f6d7ba4408a25998091b70ee35dde8bcaaeaedd3ba03d6cdab84dc683",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/textimage2video.py": {
+      "sha256": "228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/__init__.py": {
+      "sha256": "47b3d1e3f72006ac769d13b34f0575450eec7c1de1ef4f9837436a2057b51033",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/fm.py": {
+      "sha256": "9f1104a3e5ef1a371938a7ba10c63cb05cade9bffcefa15bab96fb83311ec904",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/fm_solvers.py": {
+      "sha256": "b870bdc7253593b75097896b2351e74f747f76d756f58f1b4b0008d6821ae811",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/fm_solvers_unipc.py": {
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/prompt_extend.py": {
+      "sha256": "d90503d4e526e1c899184b809221bd9ea487047de684e31589f2bb2720ca69b4",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/qwen_vl_utils.py": {
+      "sha256": "14275f4ca0c4664c37145da6bd8ffe4be7b7854377f6101e80171414397bdc98",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/system_prompt.py": {
+      "sha256": "6a42ee64ca850692e91a517b9d86ba649adc973370444746e5af5f3bde087612",
+      "executable": false
+    },
+    "inference/real_world/Motus/bak/wan/utils/utils.py": {
+      "sha256": "54eff1f85bdd1180171babceb051433ed74efd40b4a04f9d6438b83817b1410e",
+      "executable": false
+    },
+    "inference/real_world/Motus/encode_t5_instruction.py": {
+      "sha256": "f4c5c632e9662f1f4e3ef71cf2b2da0cc6f503faa199f1c241599b27c2d0e21e",
+      "executable": false
+    },
+    "inference/real_world/Motus/inference_example.py": {
+      "sha256": "498cdcb883f50a79ea178fb835a547b778fa654618b462b944560cb1d227e008",
+      "executable": false
+    },
+    "inference/real_world/Motus/models/__init__.py": {
+      "sha256": "1d3e6f785c1ca7e6251b310b6132f32d5f9d22bf00da76adce8ab135f262a2dc",
+      "executable": false
+    },
+    "inference/real_world/Motus/models/action_expert.py": {
+      "sha256": "c74392abce927df10482edd48987d27b8c79855870ab87aa4bf4a882c14a1a20",
+      "executable": false
+    },
+    "inference/real_world/Motus/models/motus.py": {
+      "sha256": "ff16ce141658647f3d558589fa00551f86378f0b9b19f0df2f45254b8c349037",
+      "executable": false
+    },
+    "inference/real_world/Motus/models/und_expert.py": {
+      "sha256": "7ff9b43e10342a8b55378ca4977178f254df84ec3b15d110e2432fb12fa13c95",
+      "executable": false
+    },
+    "inference/real_world/Motus/models/wan_model.py": {
+      "sha256": "d6d0e07d411bb106bf12780da60d2b3e7226163a6ca443b14c8a02549eee5b91",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/__init__.py": {
+      "sha256": "262022b3ebd990921f5e051931ae3e038a76d908d0a2ac46c55d2a56f66d1ffb",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/ac_one.yaml": {
+      "sha256": "f036fe50a80aa403999e2f48c0a0cbb2b3a8cb672a8094f51f5b658345290b36",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/aloha_agilex_2.yaml": {
+      "sha256": "56ce2884066cdc13631921655f0a2fb76de845cb338d42c641d734687c908a5d",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/checkpointer.py": {
+      "sha256": "50c33d79bd7f1ee5716f0b90e2dba9deb4614b1be3995a5589693515ef4e9d95",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/common.py": {
+      "sha256": "907fc1dacd58e288a3c70a5a0b09854c46d3fd9b25a05e82f654b54fd7070010",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/device.py": {
+      "sha256": "089c4a01ade5afc0e43f6bab9f428de11fb6e85827c2f40edffe6dd8567cb09d",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/fm_solvers.py": {
+      "sha256": "b870bdc7253593b75097896b2351e74f747f76d756f58f1b4b0008d6821ae811",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/image_utils.py": {
+      "sha256": "2a9d293bfedadc85c7054065f927ad4eb8509b3a7668500bcfc432457e3c27bd",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/scheduler.py": {
+      "sha256": "1786bc1668bfbc3fa855aaab4cd5d5c895e3e9c7c2fb045b02a09892a3d6cf98",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/stat.json": {
+      "sha256": "789a3b354461fba13db70dfda642613e49251f3fef22c3a2817e7f8fe6107f40",
+      "executable": false
+    },
+    "inference/real_world/Motus/utils/vlm_utils.py": {
+      "sha256": "012750bef9862398fa777abba491ac9c0c6027c68ff9ab5739247dc3bf94e48b",
+      "executable": false
+    },
+    "inference/robotwin/Motus/README.md": {
+      "sha256": "a5fa8a29fef4f675cf3afb7fa7b395530e69607728bc4104cc2ec86738249015",
+      "executable": false
+    },
+    "inference/robotwin/Motus/__init__.py": {
+      "sha256": "559dfd499a5fa98c7c1523e45c4d5374cab6b0a3e2010fcd38fda96d149dfaf2",
+      "executable": false
+    },
+    "inference/robotwin/Motus/auto_eval.sh": {
+      "sha256": "11b748d59ca13d5ea2287180a85b5121090a47a93483d73a0d1180d1fc694b5d",
+      "executable": true
+    },
+    "inference/robotwin/Motus/bak/device_utils.py": {
+      "sha256": "6b57596753de7c0e7955ae9ddd5017f78c5d113edecc93215ef8b9c85f938570",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/qwen2_5_vl/__init__.py": {
+      "sha256": "65ee89083246d69a727613e9ef352e35e952a3f87f4eaa66afa22709e49ed3bb",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/qwen2_5_vl/configuration_qwen2_5_vl.py": {
+      "sha256": "a104caeee98ebbf2de2e4ef1ac34b012da461c7427efca5daa619420cf2a33ef",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/qwen2_5_vl/modeling_qwen2_5_vl.py": {
+      "sha256": "543c996ecbb676e9642b5d32bb239505de39c866e381539b012200c6f8ee8302",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/qwen2_5_vl/modular_qwen2_5_vl.py": {
+      "sha256": "f623181fae7f970923ada19d58ed92d11ba2a908684de7c44283746396b1dc66",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/qwen2_5_vl/processing_qwen2_5_vl.py": {
+      "sha256": "11a7d3077f559fb952e453385eb491e5779caeee791bb167e079428d7ffe9abe",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/__init__.py": {
+      "sha256": "bc4450e9e1949d1b16734ed08a4f8c3e1c9b6a2a100ff555308fdf1fd4e6ba9f",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/configs/__init__.py": {
+      "sha256": "b14a049a5dbb6e8eb7cbcb012bedb716bee24e81709a937d232b0d09e48f4554",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/configs/shared_config.py": {
+      "sha256": "3ae102e029d4d0e3436ebbaa9f8fd32c10e8468ae8be07facdca2e20ec1858fe",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/configs/wan_i2v_A14B.py": {
+      "sha256": "1cddca2dd2976df3d08c602e437a8d1aec94b33b3cb4dea3187003dbe5195cd2",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/configs/wan_t2v_A14B.py": {
+      "sha256": "a1f3a70472aece6d7a3cfe83ed39be829e957484db23069c13c7a3c35ac07a48",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/configs/wan_ti2v_5B.py": {
+      "sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/distributed/__init__.py": {
+      "sha256": "013ec40a0739296f1ba474036e5d46e06998f795daa0b7c3214773d885a3ab1a",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/distributed/fsdp.py": {
+      "sha256": "b787312856a1f4da54648999c143d08c3dfa09be75be78e8c39fd21f55b823dd",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/distributed/sequence_parallel.py": {
+      "sha256": "4f50898eff51efbfebf8709e2d2993fc87b2442c548753cd36e4e607cdd55e0a",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/distributed/ulysses.py": {
+      "sha256": "0c9969ec8e99358fb79a224700853f89b52724c8dc2055f91972ace47f04a483",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/distributed/util.py": {
+      "sha256": "b8925fdbdc0cf4409ba5760d92c66f1e329de40b1dad7f2011a7d37caad97b56",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/image2video.py": {
+      "sha256": "53f4f302f7e9bc7bca2465abd3f7ff5f0e8fa909c7dc36bd0c49abb7918d5f68",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/__init__.py": {
+      "sha256": "7bb54dcccf99bbdab4d5781519c8324629be898986427054a48285cc7faa316c",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/attention.py": {
+      "sha256": "23fe7c6f6e4065242d95e5e188cb2d1a16bd283f05dca7e7e878977158fcfdbc",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/model.py": {
+      "sha256": "01feaa3c7942fa85b9d0056d567c9793899fd841bbe26fcca8bde944868f1979",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/t5.py": {
+      "sha256": "8b0cebf3192c542f92a344255a06c203df3ba24160715899a055cc8de0cd930f",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/tokenizers.py": {
+      "sha256": "cf5b189c1ae017326efadab2fc6380ba223fa7a59d0be6464bd264db53c76934",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/vae2_1.py": {
+      "sha256": "d0dfe9eccd0cdbcb37ffde9887579be58f4c1bb6fc2dbb1b72e8916e170df180",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/modules/vae2_2.py": {
+      "sha256": "e949e2c7b6fbda11caa2546c425992f193b3c05ff82544e269db5f11f687ebdd",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/text2video.py": {
+      "sha256": "2f212e1f6d7ba4408a25998091b70ee35dde8bcaaeaedd3ba03d6cdab84dc683",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/textimage2video.py": {
+      "sha256": "228f2fabf23014ed41ec6b8cd713d5be7371bb558501c71a62a0258b491a877b",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/__init__.py": {
+      "sha256": "47b3d1e3f72006ac769d13b34f0575450eec7c1de1ef4f9837436a2057b51033",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/fm.py": {
+      "sha256": "9f1104a3e5ef1a371938a7ba10c63cb05cade9bffcefa15bab96fb83311ec904",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/fm_solvers.py": {
+      "sha256": "b870bdc7253593b75097896b2351e74f747f76d756f58f1b4b0008d6821ae811",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/fm_solvers_unipc.py": {
+      "sha256": "0dec8c7ed17f6f2049275c6848113314da6ccec1c8db5bdc89df43c05c6038d9",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/prompt_extend.py": {
+      "sha256": "d90503d4e526e1c899184b809221bd9ea487047de684e31589f2bb2720ca69b4",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/qwen_vl_utils.py": {
+      "sha256": "14275f4ca0c4664c37145da6bd8ffe4be7b7854377f6101e80171414397bdc98",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/system_prompt.py": {
+      "sha256": "6a42ee64ca850692e91a517b9d86ba649adc973370444746e5af5f3bde087612",
+      "executable": false
+    },
+    "inference/robotwin/Motus/bak/wan/utils/utils.py": {
+      "sha256": "54eff1f85bdd1180171babceb051433ed74efd40b4a04f9d6438b83817b1410e",
+      "executable": false
+    },
+    "inference/robotwin/Motus/deploy_policy.py": {
+      "sha256": "4c47bde06e1eddfa352a5396252def3779fadd3db9c63ffa5d069197485520a2",
+      "executable": false
+    },
+    "inference/robotwin/Motus/deploy_policy.yml": {
+      "sha256": "896e97776b75755d845dc264b5f30d1a057196eafa02d4d4c91e872a9b84992e",
+      "executable": false
+    },
+    "inference/robotwin/Motus/eval.sh": {
+      "sha256": "2f31f204a0238ae7d91c5b0f1971b0cb8a98504597b914d9ca2137d457af112e",
+      "executable": false
+    },
+    "inference/robotwin/Motus/models/__init__.py": {
+      "sha256": "1d3e6f785c1ca7e6251b310b6132f32d5f9d22bf00da76adce8ab135f262a2dc",
+      "executable": false
+    },
+    "inference/robotwin/Motus/models/action_expert.py": {
+      "sha256": "c74392abce927df10482edd48987d27b8c79855870ab87aa4bf4a882c14a1a20",
+      "executable": false
+    },
+    "inference/robotwin/Motus/models/motus.py": {
+      "sha256": "ff16ce141658647f3d558589fa00551f86378f0b9b19f0df2f45254b8c349037",
+      "executable": false
+    },
+    "inference/robotwin/Motus/models/und_expert.py": {
+      "sha256": "7ff9b43e10342a8b55378ca4977178f254df84ec3b15d110e2432fb12fa13c95",
+      "executable": false
+    },
+    "inference/robotwin/Motus/models/wan_model.py": {
+      "sha256": "d6d0e07d411bb106bf12780da60d2b3e7226163a6ca443b14c8a02549eee5b91",
+      "executable": false
+    },
+    "inference/robotwin/Motus/paths_config.yml": {
+      "sha256": "aa7d034a8b9cf70cd16b0c5a70aeaad52633c0d16cff9bd10a3f92ec235f94a2",
+      "executable": false
+    },
+    "inference/robotwin/Motus/per_eval_logs.sh": {
+      "sha256": "a5ff82f1d9b2c51a08c2a48885f5d05234440551d452ad63c18bfc9ade280655",
+      "executable": true
+    },
+    "inference/robotwin/Motus/requirements.txt": {
+      "sha256": "2c79be7ffe1e83ab9f81f4c245c6e062dc2927e615feefac8f773f80e31b36d9",
+      "executable": false
+    },
+    "inference/robotwin/Motus/tasks_all.txt": {
+      "sha256": "7c10a43ea9cd7217288b82b0432021cd470209f572f1de88c6729a879e8aaf83",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/__init__.py": {
+      "sha256": "262022b3ebd990921f5e051931ae3e038a76d908d0a2ac46c55d2a56f66d1ffb",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/checkpointer.py": {
+      "sha256": "50c33d79bd7f1ee5716f0b90e2dba9deb4614b1be3995a5589693515ef4e9d95",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/common.py": {
+      "sha256": "907fc1dacd58e288a3c70a5a0b09854c46d3fd9b25a05e82f654b54fd7070010",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/device.py": {
+      "sha256": "6b57596753de7c0e7955ae9ddd5017f78c5d113edecc93215ef8b9c85f938570",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/fm_solvers.py": {
+      "sha256": "b870bdc7253593b75097896b2351e74f747f76d756f58f1b4b0008d6821ae811",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/image_utils.py": {
+      "sha256": "2a9d293bfedadc85c7054065f927ad4eb8509b3a7668500bcfc432457e3c27bd",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/robotwin.yml": {
+      "sha256": "99e3200bb8796f3610ce3ece9858d366f81d362013011e726d64f06d19009403",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/scheduler.py": {
+      "sha256": "1786bc1668bfbc3fa855aaab4cd5d5c895e3e9c7c2fb045b02a09892a3d6cf98",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/stat.json": {
+      "sha256": "789a3b354461fba13db70dfda642613e49251f3fef22c3a2817e7f8fe6107f40",
+      "executable": false
+    },
+    "inference/robotwin/Motus/utils/vlm_utils.py": {
+      "sha256": "012750bef9862398fa777abba491ac9c0c6027c68ff9ab5739247dc3bf94e48b",
+      "executable": false
+    },
+    "models/__init__.py": {
+      "sha256": "1d3e6f785c1ca7e6251b310b6132f32d5f9d22bf00da76adce8ab135f262a2dc",
+      "executable": false
+    },
+    "models/action_expert.py": {
+      "sha256": "7dbfd473007b70952a1cbc05d953e8a3c078d04f869bf359c2a2bbdae74bf8ed",
+      "executable": false
+    },
+    "models/motus.py": {
+      "sha256": "0aae13961327056cf78af974bf1850f03164fb99fe1a80c0376b92f105e14cd4",
+      "executable": false
+    },
+    "models/und_expert.py": {
+      "sha256": "ac2b611ba358658d9fdb2eecbe962f7d1f58726f82626f9be66655e723bdcbe2",
+      "executable": false
+    },
+    "models/wan_model.py": {
+      "sha256": "9b81d80e4a15eb1ca05224fc6c03dc7ddfb74a053f7500cffce52bfa59d45bc8",
+      "executable": false
+    },
+    "requirements.txt": {
+      "sha256": "532999f0e11f702b837afc2e7879c50ff9fb6620d6b2a1626e28268f84ca220b",
+      "executable": false
+    },
+    "requirements/lerobot.txt": {
+      "sha256": "96efd2bc3e4dbc88283f3aeea6a5734a2fed3c460857d40a53cf8a5c76bd8314",
+      "executable": false
+    },
+    "scripts/__init__.py": {
+      "sha256": "229a9e71481598e8199cbb15074aadb8d0b4905cbe0aac27fb1786466373ff00",
+      "executable": false
+    },
+    "scripts/export_config_json.py": {
+      "sha256": "522bdeb4bbd0c7c3f4a8d7299127a0f8eb9dadb6a78c9fae5ca6629edbaee5f2",
+      "executable": false
+    },
+    "scripts/slurm/launch.sh": {
+      "sha256": "c9cd28bccade17a1793fb8cf317a41b88eaf786676bdf5414d3383753258af9e",
+      "executable": true
+    },
+    "scripts/slurm/multi_node_worker.sh": {
+      "sha256": "527a418b721c2cbdcab3207da2468b45c720f5d85b86e2b6e642c99cef7a7c00",
+      "executable": true
+    },
+    "scripts/slurm/slurm_multi_node.sh": {
+      "sha256": "b782a6dd86a76537fa9fb5409177dcec61c484f117d08ce3395d22137dca4abb",
+      "executable": true
+    },
+    "scripts/slurm/slurm_single_node.sh": {
+      "sha256": "f87aec94b999e9e06fe3dc86ace7646ccbc48f8025d90d9d25f7165e88b7315f",
+      "executable": true
+    },
+    "scripts/train.sh": {
+      "sha256": "389848dfc33f6d2f9091e90a69110ec6e4879999c8d4b412378c53d3ffd958b3",
+      "executable": false
+    },
+    "train/sample.py": {
+      "sha256": "1b562d0cc4b524ce0ecab2fb4067efd6d17d55b30add33df9701fb9c367b3462",
+      "executable": false
+    },
+    "train/train.py": {
+      "sha256": "e4460110afa47cd1dcbe55d0b2c3c4261510b6a66ac9e2ddfc85223bee5f7baa",
+      "executable": false
+    },
+    "utils/__init__.py": {
+      "sha256": "262022b3ebd990921f5e051931ae3e038a76d908d0a2ac46c55d2a56f66d1ffb",
+      "executable": false
+    },
+    "utils/checkpointer.py": {
+      "sha256": "50c33d79bd7f1ee5716f0b90e2dba9deb4614b1be3995a5589693515ef4e9d95",
+      "executable": false
+    },
+    "utils/common.py": {
+      "sha256": "dd6efec6480d0c6ac3aaacf09f5af0e99df13b69f5aeb1b5d30d49efb479d796",
+      "executable": false
+    },
+    "utils/device.py": {
+      "sha256": "ce37f0c4e36e1d611f2919c03c436cb8df57a131264bdb2e30955d780a27446a",
+      "executable": false
+    },
+    "utils/fastpath.py": {
+      "sha256": "c893c249664e2079de07d821d199377be3848da3b699e20e702c9890db61f17c",
+      "executable": false
+    },
+    "utils/scheduler.py": {
+      "sha256": "584966fcc2431f317aefd9b03832e7c46b0fca1b61246edac3baebd25916a732",
+      "executable": false
+    },
+    "utils/vlm_utils.py": {
+      "sha256": "012750bef9862398fa777abba491ac9c0c6027c68ff9ab5739247dc3bf94e48b",
+      "executable": false
+    }
+  }
+}

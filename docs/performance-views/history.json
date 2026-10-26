@@ -1,0 +1,42 @@
+{
+  "hardware": "8 GPUs; upstream scripts/train.sh recipe (batch 8 per GPU, DeepSpeed ZeRO-1, BF16) on the benchmark fixture: a 496-episode RoboTwin 2.0 subset, 9 iterations per epoch",
+  "scope": "Cumulative configurations; time per training iteration on the benchmark fixture. R01-R03 are timing screens against the frozen baseline (7.894 s); R04 is the full check of the final configuration against two fresh baseline runs (its timing screen measured 0.7842 s, 10.07x). The agent's diagnosis round, which kept no change, is left out. Every round is bitwise identical to the baseline. The released preset keeps R01 and R03; on the full data it measures 9.59x (full-data-benchmark.json).",
+  "rows": [
+    {
+      "round": 1,
+      "label": "DeepSpeed hook count cache",
+      "check": "screen",
+      "reference_s": 7.894,
+      "candidate_s": 1.2625,
+      "in_release": true,
+      "speedup": 6.2527
+    },
+    {
+      "round": 2,
+      "label": "Data-loader workers reused",
+      "check": "screen",
+      "reference_s": 7.894,
+      "candidate_s": 1.0289,
+      "in_release": false,
+      "speedup": 7.6723
+    },
+    {
+      "round": 3,
+      "label": "Memory-mapped umt5 embeddings",
+      "check": "screen",
+      "reference_s": 7.894,
+      "candidate_s": 0.9942,
+      "in_release": true,
+      "speedup": 7.9401
+    },
+    {
+      "round": 4,
+      "label": "Speculative next epoch",
+      "check": "full",
+      "reference_s": 8.0101,
+      "candidate_s": 0.7634,
+      "in_release": false,
+      "speedup": 10.4927
+    }
+  ]
+}

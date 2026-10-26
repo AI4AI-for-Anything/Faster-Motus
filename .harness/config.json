@@ -1,0 +1,6 @@
+{
+  "environment": {
+    "MOTUS_OPT_DS_HOOK": "1",
+    "MOTUS_OPT_LANG_MMAP": "1"
+  }
+}

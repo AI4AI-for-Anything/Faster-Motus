@@ -1,0 +1,374 @@
+{
+  "schema_version": 2,
+  "upstream": "88f6fe30c62af033874b0a2e48ad1cbdaf12cfdf",
+  "phases": [
+    {
+      "id": "optimization",
+      "label": "Agent optimization (judged snapshot)",
+      "paths": [
+        "data/robotwin2/robotwin_agilex_dataset.py",
+        "train/train.py",
+        "utils/fastpath.py"
+      ]
+    },
+    {
+      "id": "release",
+      "label": "Release: preset, validation tools, tests and documentation",
+      "paths": null
+    }
+  ],
+  "files": [
+    {
+      "phase": "optimization",
+      "module": "Training loop",
+      "path": "train/train.py",
+      "status": "M",
+      "added": 4,
+      "removed": 0,
+      "description": "Imports utils/fastpath.py; calls apply_all() at import (DS_HOOK) and before_train_loop() right before the first data iterator (loader switches).",
+      "source_link": "../../train/train.py",
+      "blob_sha": "16ec7c3261a4446d83f01263b0337cd2345b5dde"
+    },
+    {
+      "phase": "optimization",
+      "module": "Fast paths",
+      "path": "utils/fastpath.py",
+      "status": "A",
+      "added": 423,
+      "removed": 0,
+      "description": "DS_HOOK: per-graph-task cache of DeepSpeed's used-parameter count. LOADER_REUSE: persistent data-loader workers re-seeded like fresh ones. LOADER_SPEC: speculative next-epoch worker pool. MOTUS_DIAG_LOADER: a diagnostic loader watchdog.",
+      "source_link": "../../utils/fastpath.py",
+      "blob_sha": "44feb2a22d18fe966681589219c6e6a117c6f6b4"
+    },
+    {
+      "phase": "optimization",
+      "module": "Data",
+      "path": "data/robotwin2/robotwin_agilex_dataset.py",
+      "status": "M",
+      "added": 22,
+      "removed": 1,
+      "description": "LANG_MMAP: memory-mapped umt5 embedding lists, cached per worker; marks the dataset index-free for LOADER_SPEC.",
+      "source_link": "../../data/robotwin2/robotwin_agilex_dataset.py",
+      "blob_sha": "22ed7bee826c2450e1ad4a171187ae33bf796ee3"
+    },
+    {
+      "phase": "release",
+      "module": "Preset",
+      "path": ".harness/config.json",
+      "status": "A",
+      "added": 6,
+      "removed": 0,
+      "description": "The selected switches as an environment mapping: DS_HOOK + LANG_MMAP.",
+      "source_link": "../../.harness/config.json",
+      "blob_sha": "f29cd8085e22b192a1364200f73da639e2676599"
+    },
+    {
+      "phase": "release",
+      "module": "Preset",
+      "path": "scripts/faster-motus.env.sh",
+      "status": "A",
+      "added": 8,
+      "removed": 0,
+      "description": "Shell version of the preset; lists the two switches it leaves out.",
+      "source_link": "../../scripts/faster-motus.env.sh",
+      "blob_sha": "19bfd3cab38ebc16816e9038fe959127973e4e0f"
+    },
+    {
+      "phase": "release",
+      "module": "Agent workflow",
+      "path": "AGENTS.md",
+      "status": "A",
+      "added": 21,
+      "removed": 0,
+      "description": "Rules for agents: upstream recipe, switches default off, bitwise checks, LOADER_SPEC off, shared-GPU etiquette, what never to commit.",
+      "source_link": "../../AGENTS.md",
+      "blob_sha": "ee4319839763ef54c8d9563f71e2a579ab6e6553"
+    },
+    {
+      "phase": "release",
+      "module": "Agent workflow",
+      "path": "skills/validate-faster-motus/SKILL.md",
+      "status": "A",
+      "added": 33,
+      "removed": 0,
+      "description": "Checklist to compare Faster-Motus with upstream bitwise and in time per iteration on a new machine.",
+      "source_link": "../../skills/validate-faster-motus/SKILL.md",
+      "blob_sha": "cfb52bee1450a223fe6ff1a24f87e7617586cf23"
+    },
+    {
+      "phase": "release",
+      "module": "Validation tools",
+      "path": "tools/compare_runs.py",
+      "status": "A",
+      "added": 91,
+      "removed": 0,
+      "description": "Bitwise comparison of two recorded runs, rank by rank; timing summary.",
+      "source_link": "../../tools/compare_runs.py",
+      "blob_sha": "927bb82700206b4e651616ce27c223d13ed5bd7f"
+    },
+    {
+      "phase": "release",
+      "module": "Validation tools",
+      "path": "tools/fullrun.py",
+      "status": "A",
+      "added": 187,
+      "removed": 0,
+      "description": "Runs train/train.py unchanged under torchrun with per-rank seeds and optional determinism; records every step and the final state digests.",
+      "source_link": "../../tools/fullrun.py",
+      "blob_sha": "e75f5e5a15a90114a23a622b5c68249fabad1389"
+    },
+    {
+      "phase": "release",
+      "module": "Validation tools",
+      "path": "tools/mem_sample.sh",
+      "status": "A",
+      "added": 21,
+      "removed": 0,
+      "description": "Samples host memory while a run trains.",
+      "source_link": "../../tools/mem_sample.sh",
+      "blob_sha": "860bc8671eeab9145162ba8f7e476b672b9c7aa7"
+    },
+    {
+      "phase": "release",
+      "module": "Validation tools",
+      "path": "tools/run_validation.sh",
+      "status": "A",
+      "added": 46,
+      "removed": 0,
+      "description": "Launches one recorded run with the config's paths, steps and switches filled in.",
+      "source_link": "../../tools/run_validation.sh",
+      "blob_sha": "438f3c16668938f49c7b8765704072b7e9fa9607"
+    },
+    {
+      "phase": "release",
+      "module": "Data preparation",
+      "path": "tools/convert_robotwin_full.py",
+      "status": "A",
+      "added": 107,
+      "removed": 0,
+      "description": "Runs upstream's converter on all 100 RoboTwin 2.0 aloha-agilex archives in parallel.",
+      "source_link": "../../tools/convert_robotwin_full.py",
+      "blob_sha": "b145de28051a36dd1173b988dc3f1bf762266f91"
+    },
+    {
+      "phase": "release",
+      "module": "Data preparation",
+      "path": "tools/encode_t5_sharded.py",
+      "status": "A",
+      "added": 117,
+      "removed": 0,
+      "description": "Upstream's umt5 encoder over the converted data, shared by any number of GPU workers.",
+      "source_link": "../../tools/encode_t5_sharded.py",
+      "blob_sha": "06bba3c81a7146f089eed1a28bc937d1b0c95de4"
+    },
+    {
+      "phase": "release",
+      "module": "Tests",
+      "path": "tests/test_ds_hook.py",
+      "status": "A",
+      "added": 67,
+      "removed": 0,
+      "description": "CPU: cached count equals DeepSpeed's per-backward maximum, per graph task and parameter list.",
+      "source_link": "../../tests/test_ds_hook.py",
+      "blob_sha": "bf0ba77a9f73a064e2bbf9b396dc8ab38c6a9a58"
+    },
+    {
+      "phase": "release",
+      "module": "Tests",
+      "path": "tests/test_lang_mmap.py",
+      "status": "A",
+      "added": 52,
+      "removed": 0,
+      "description": "CPU: mapped umt5 list equals torch.load's list bitwise; cached per worker.",
+      "source_link": "../../tests/test_lang_mmap.py",
+      "blob_sha": "694363c7b4b606f0c48a0447b4855be2cc155243"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/01-benchmark.png",
+      "status": "A",
+      "added": null,
+      "removed": null,
+      "description": "PNG copy of the SVG figure of the same name.",
+      "source_link": "../../docs/performance-views/01-benchmark.png",
+      "blob_sha": "219f4664f76f395096da9ac22246e64a5394550a"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/01-benchmark.svg",
+      "status": "A",
+      "added": 163,
+      "removed": 0,
+      "description": "README headline figure: baseline vs Faster-Motus time per iteration (PNG copy alongside).",
+      "source_link": "../../docs/performance-views/01-benchmark.svg",
+      "blob_sha": "1377eca657c051a8143946d13759af5c2573d4bc"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/02-history.png",
+      "status": "A",
+      "added": null,
+      "removed": null,
+      "description": "PNG copy of the SVG figure of the same name.",
+      "source_link": "../../docs/performance-views/02-history.png",
+      "blob_sha": "61919be031c781d884c9bbd890d30482990adad0"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/02-history.svg",
+      "status": "A",
+      "added": 323,
+      "removed": 0,
+      "description": "Cumulative speedup over the agent's rounds R01-R04 on the benchmark fixture (PNG copy alongside).",
+      "source_link": "../../docs/performance-views/02-history.svg",
+      "blob_sha": "d0733582fdf018cd30763d8ae0653aa9de589cfa"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/full-data-benchmark.json",
+      "status": "A",
+      "added": 80,
+      "removed": 0,
+      "description": "Full-data timing and memory measurements behind the README table and figures.",
+      "source_link": "../../docs/performance-views/full-data-benchmark.json",
+      "blob_sha": "262746f1bb69ba52f1e895fa5ea3ac2853672a58"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/history.json",
+      "status": "A",
+      "added": 42,
+      "removed": 0,
+      "description": "The agent's rounds R01-R04 on the benchmark fixture, with their timing screens and the final full check.",
+      "source_link": "../../docs/performance-views/history.json",
+      "blob_sha": "5798d22e46d33e0f23ed6abde27dae54ae2be677"
+    },
+    {
+      "phase": "release",
+      "module": "Results",
+      "path": "docs/performance-views/render.py",
+      "status": "A",
+      "added": 121,
+      "removed": 0,
+      "description": "Draws the README figures and the module map from the two records (matplotlib, no GPU).",
+      "source_link": "../../docs/performance-views/render.py",
+      "blob_sha": "587b043515cc51c7a55e389dc38bfdaff5107613"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "README.md",
+      "status": "M",
+      "added": 67,
+      "removed": 2,
+      "description": "Faster-Motus overview, results and switches; upstream README kept below.",
+      "source_link": "../../README.md",
+      "blob_sha": "e5d335ff39f6f0e4d31ee5be4c14d25d59d6004b"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "README.zh-CN.md",
+      "status": "A",
+      "added": 266,
+      "removed": 0,
+      "description": "Chinese version of the README.",
+      "source_link": "../../README.zh-CN.md",
+      "blob_sha": "cc8ebe328d5d9963be9055191f13b0aaebaee3fa"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/agent-environment.md",
+      "status": "A",
+      "added": 103,
+      "removed": 0,
+      "description": "Validated stack, assets, full-data conversion, NCCL fix, upstream converter workarounds and troubleshooting.",
+      "source_link": "../../docs/agent-environment.md",
+      "blob_sha": "761eb1003a3b66bcbe56234fa785e4d7404096c5"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/change-views/generate.py",
+      "status": "A",
+      "added": 156,
+      "removed": 0,
+      "description": "These change views and their generator.",
+      "source_link": "../../docs/change-views/generate.py",
+      "blob_sha": "12e7b1b75f7f3b7d842b74cf54767ca5ca51ea7b"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/change-views/module-map.png",
+      "status": "A",
+      "added": null,
+      "removed": null,
+      "description": "PNG copy of the module map.",
+      "source_link": "../../docs/change-views/module-map.png",
+      "blob_sha": "c2b4c30fe7146f8a3609f4bb4e975c1ddb00f3c0"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/change-views/module-map.svg",
+      "status": "A",
+      "added": 181,
+      "removed": 0,
+      "description": "Cards summarizing the four code changes (drawn by render.py; PNG copy alongside).",
+      "source_link": "../../docs/change-views/module-map.svg",
+      "blob_sha": "b20f95327fa937a5fa24eea62e4c573ce0cd77fe"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/full-data-results.md",
+      "status": "A",
+      "added": 96,
+      "removed": 0,
+      "description": "Full-data setup, bitwise results, timing of every switch set, why LOADER_SPEC is off by default, and limits.",
+      "source_link": "../../docs/full-data-results.md",
+      "blob_sha": "8ac11bf5a2b2d6bd63296b53e16322974206fc88"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/release-boundary.md",
+      "status": "A",
+      "added": 17,
+      "removed": 0,
+      "description": "What this repository contains and what stays in the research harness.",
+      "source_link": "../../docs/release-boundary.md",
+      "blob_sha": "f81b83e42fc23c462cfdac868b5378e4d6bab13d"
+    },
+    {
+      "phase": "release",
+      "module": "Documentation",
+      "path": "docs/source-snapshot.json",
+      "status": "A",
+      "added": 846,
+      "removed": 0,
+      "description": "Per-file SHA-256 of the judged source snapshot.",
+      "source_link": "../../docs/source-snapshot.json",
+      "blob_sha": "2115358aa8806e71b2f86e2d39a6edc150b090e5"
+    },
+    {
+      "phase": "release",
+      "module": "Repository",
+      "path": ".gitignore",
+      "status": "M",
+      "added": 6,
+      "removed": 1,
+      "description": "Keeps the rendered charts despite upstream's *.png rule; ignores local runs.",
+      "source_link": "../../.gitignore",
+      "blob_sha": "c347c25b985124d5fa2f92037bd63b0e2e669ef3"
+    }
+  ]
+}

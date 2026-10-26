@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "date": "2026-10-21",
+  "hardware": "one node, 8 GPUs (NVLink), 2.9 TB host RAM, driver 580.126.09",
+  "software": "Python 3.10, torch 2.7.1+cu128 with nvidia-nccl-cu12 2.27.3, DeepSpeed 0.18.5, accelerate 1.12.0, transformers 5.0.0rc0, flash-attn 2.8.3",
+  "workload": {
+    "recipe": "upstream scripts/train.sh: torchrun, 8 ranks, train/train.py --deepspeed configs/zero1.json --config configs/robotwin.yaml",
+    "model": "Motus: Wan2.2-TI2V-5B video expert, frozen Qwen3-VL-2B, action and understanding experts (8.0B parameters, 5.9B trainable), fine-tuned from the released Stage-2 checkpoint",
+    "data": "RoboTwin 2.0, all 50 tasks, aloha-agilex clean (50) and randomized (500) demonstrations, converted with upstream's converter: 27,244 episodes",
+    "per_gpu_batch": 8,
+    "global_batch": 64,
+    "dataloader_workers_per_gpu": 16,
+    "iterations_per_epoch": 532,
+    "mode": "upstream default (non-deterministic kernels); every rank's torch, Python and numpy streams seeded with a fixed seed + rank"
+  },
+  "measurement": "Host time per iteration on rank 0: time between the starts of consecutive training steps (includes the data wait). Headline window: iterations 21-150 of each run, which contain no validation and no epoch boundary.",
+  "reference": {
+    "label": "Baseline (upstream Motus, no switches)",
+    "switches": [],
+    "steps": 150,
+    "mean_s_21_150": 7.46764,
+    "median_s_21_150": 7.4755
+  },
+  "configs": [
+    {
+      "label": "All four switches (the agent's final configuration)",
+      "short": "All four switches",
+      "switches": [
+        "DS_HOOK",
+        "LOADER_REUSE",
+        "LANG_MMAP",
+        "LOADER_SPEC"
+      ],
+      "steps": 650,
+      "mean_s_21_150": 1.79855,
+      "mean_s_21_650": 1.0965,
+      "mean_s_151_650_excluding_validation_and_boundary": 0.8731,
+      "validation_iteration_501_s": 16.29,
+      "epoch_boundary_iteration_533_s": 5.86
+    },
+    {
+      "label": "Faster-Motus preset (DS_HOOK + LANG_MMAP)",
+      "short": "Faster-Motus preset",
+      "switches": [
+        "DS_HOOK",
+        "LANG_MMAP"
+      ],
+      "preset": true,
+      "steps": 650,
+      "mean_s_21_150": 0.77849,
+      "mean_s_21_650": 0.8126,
+      "mean_s_151_650_excluding_validation_and_boundary": 0.7756,
+      "validation_iteration_501_s": 17.35,
+      "epoch_boundary_iteration_533_s": 7.1
+    },
+    {
+      "label": "Preset + LOADER_REUSE",
+      "short": "Preset + LOADER_REUSE",
+      "switches": [
+        "DS_HOOK",
+        "LANG_MMAP",
+        "LOADER_REUSE"
+      ],
+      "steps": 650,
+      "mean_s_21_150": 0.78283,
+      "mean_s_21_650": 0.8082,
+      "mean_s_151_650_excluding_validation_and_boundary": 0.7727,
+      "validation_iteration_501_s": 17.15,
+      "epoch_boundary_iteration_533_s": 5.4
+    }
+  ],
+  "headline": {
+    "baseline_s": 7.46764,
+    "faster_s": 0.77849,
+    "speedup": 9.5924,
+    "window": "iterations 21-150"
+  },
+  "notes": "The baseline ran 150 iterations; it has no validation or epoch boundary in its window."
+}
